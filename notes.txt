@@ -1,0 +1,9 @@
+HDFS - Hadoop Distributed File System which stores
+difference multiprocessing and multithreading
+python multiprocessing and multithreading in computer systems
+how thread is initial;  what python does
+
+
+#Connect host from terminal
+ssh root@127.0.0.1 -p 2222
+hdfs dfs -ls /user/admin/data
