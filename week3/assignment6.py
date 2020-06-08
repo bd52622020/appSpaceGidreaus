@@ -1,6 +1,6 @@
 import operator
 import re
-from password import password
+
 
 
 ### Q1
@@ -24,29 +24,25 @@ class User:
         self.strng = strng
         
     def get_String(self,strng):
-        self.strng = strng
+        self.strng = input("Please enter a string: ")
     
     def print_String(self):
-        print(self.strng)
+        print(self.strng.upper())
         
 print("Q2")       
 us = User("")
 us.get_String("string")
-print(us.print_String())
+us.print_String()
 
 
 ### Q3
-
-pattern2 ="[0-9]"
-pattern3 = re.compile("[$#@]")
-
 
 def validate_password(password):
     if len(re.findall("[a-z]", password))  == 0:
         print("Password:", password, " doesn't contain any lower letter.")
         return False
     elif len(re.findall("[A-Z]", password))  == 0:
-        print("Password:", password, "doesn't contain  any upper letter.")
+        print("Password:", password, "doesn't contain any upper letter.")
         return False
     elif len(re.findall("[0-9]", password))  == 0:
         print("Password:", password, "doesn't contain any number.")
@@ -76,7 +72,7 @@ print( validate_password("psS#455"))
 ### Q3      
 print("Q4",end="\n\n") 
 
-def construnct_pattern():
+def construct_pattern():
     
     d, sym_qnt = 1, 0
     
@@ -89,6 +85,6 @@ def construnct_pattern():
             print("*", end="")
         print("")
 
-construnct_pattern()
+construct_pattern()
 
         
