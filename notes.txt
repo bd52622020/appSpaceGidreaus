@@ -16,5 +16,9 @@ The main difference that multiprocessing runs tasks on different Python instance
 ssh root@127.0.0.1 -p 2222
 hdfs dfs -ls /user/admin/data
 
+library mr_jobs python
+scp -P 2222 /home/giedrius/Documetns/ml-100k root@127.0.0.1:/root/admin/user
 
 
+
+scp -P 2222 /home/giedrius/Documetns/ml-100k media_dev@127.0.0.1:/user/admin/data

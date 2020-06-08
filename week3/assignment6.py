@@ -19,9 +19,6 @@ print("Sorted values:", get_sorted_list(stud_dict))
 class User:
     
     strng = ""
-    
-    def __init__(self, strng):
-        self.strng = strng
         
     def get_String(self,strng):
         self.strng = input("Please enter a string: ")
@@ -30,12 +27,14 @@ class User:
         print(self.strng.upper())
         
 print("Q2")       
-us = User("")
+us = User()
 us.get_String("string")
 us.print_String()
 
 
 ### Q3
+
+
 
 def validate_password(password):
     if len(re.findall("[a-z]", password))  == 0:
@@ -60,13 +59,8 @@ def validate_password(password):
         return True
     
 print("Q3") 
-print( validate_password("pass"))         
-print( validate_password("PasS"))  
-print( validate_password("pasS4"))  
-print( validate_password("psS#4"))  
-print( validate_password("psS#4"))  
-print( validate_password("psS#45555555555555555")) 
-print( validate_password("psS#455")) 
+password = input("Please enter a password: ")
+validate_password(password)
 
 
 ### Q3      
