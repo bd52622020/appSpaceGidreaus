@@ -1,0 +1,20 @@
+### Hadoop Distributed File System (HDFS)
+HDFSis a key part of the Hadoop ecosystem which is responsible for data storing and accessibility in Hadoop clusters.
+
+### Python multithreading
+Python multithreading is a process that lets run several different programs concurrently on the single-processor sharing the same data space. The Python interpreter at multithreading runs only one thread at the time and switches to another by a specific time interval. Python saves not actives thread states and runs threads in switching manner till all threads finish their tasks. Python threading is great for creating a responsive GUI, or for handling multiple short web requests where I/O is the bottleneck more than the Python code
+
+### Python multiprocess
+Python multiprocess is a package that runs several programs on different Python instances. In this programming manner, each Python instance can run on different computer processors, and with increased computational power execute all tasks faster.
+
+### Difference between Python multithreading and multiprocessing
+The main difference that multiprocessing runs tasks on different Python instances, which have their own working memory, and each instance runs on separate computer processors (possible run on single-core, but would be not efficient). Meanwhile, multithreading tasks are executed on single-core and share the same data space.
+
+
+
+# Connect host from terminal
+ssh root@127.0.0.1 -p 2222
+hdfs dfs -ls /user/admin/data
+
+
+
