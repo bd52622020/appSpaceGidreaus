@@ -5,10 +5,7 @@ import re
 ### Q1
 def print_prime(limit):
    
-    for num in range(1, limit+1): 
-            if (num == 2) :
-                print(num, end= " ");
-                continue
+    for num in range(2, limit+1): 
             is_prime = True
             for i in range(2,num):
                 if (num % i) == 0: 
