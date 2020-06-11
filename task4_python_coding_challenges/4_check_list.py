@@ -4,7 +4,6 @@ def check_list(num_list):
     else:
         return False
 
-print("Q4")     
 print("[1,2]:", check_list([1,2]))
 print("[3]:", check_list([3]))
 print("[3,5,3]:", check_list([3,4,3]))     

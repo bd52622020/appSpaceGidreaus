@@ -20,6 +20,7 @@ def validate_password(password):
         print("Password:", password, "has more than 14 characters.")
         return False
     else:
+        print("Password is valid")
         return True
     
 password = input("Please enter a password: ")

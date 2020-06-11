@@ -8,7 +8,6 @@ def ckeck_speed(speed):
     else:
         print("Points:", points)
         
-print("Q1")
 ckeck_speed(68)    
 ckeck_speed(88)
 ckeck_speed(136)
