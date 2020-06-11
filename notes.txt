@@ -14,11 +14,12 @@ The main difference that multiprocessing runs tasks on different Python instance
 
 # Connect host from terminal
 ambari-admin-password-reset
-ssh-keygen -R [127.0.0.1]:2222 # f
-ssh root@127.0.0.1 -p 2222
-ssh maria_dev@127.0.0.1 -p 2222
+ssh-keygen -R [127.0.0.1]:2222 
+#https://stackoverflow.com/questions/58141892/hortonworks-sandbox-2-5-yum-install-python-pip-not-working 
+#https://tecadmin.net/install-python-2-7-on-centos-rhel/
+ssh maria_dev@127.0.0.1 -p 2222 #root/admin
 hdfs dfs -ls /user/admin/data
-ssh maria_dev@127.0.0.1 -p 2222
+spark-submit /home/maria_dev/q1.py
 
 library mr_jobs python
 scp -P 2222 /home/giedrius/Documents/ml-100k/u.user maria_dev@127.0.0.1:/home/maria_dev
