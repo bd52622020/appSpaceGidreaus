@@ -22,9 +22,7 @@ hdfs dfs -ls /user/admin/data
 spark-submit /home/maria_dev/q1.py
 
 library mr_jobs python
-scp -P 2222 /home/giedrius/Documents/ml-100k/u.user maria_dev@127.0.0.1:/home/maria_dev
-
-
+scp -P 2222 /home/giedrius/Documents/ml-100k/q1.py maria_dev@127.0.0.1:/home/maria_dev
 hdfs dfs -copyFromlocal  /home/giedrius/Documents/ml-100k  hdfs:///user/media_dev/
 
 
