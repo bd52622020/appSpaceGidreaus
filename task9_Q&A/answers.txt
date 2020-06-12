@@ -13,4 +13,4 @@ Deploy mode specifies where spark driver program will run. It can run on local c
 7. What is the difference between RDD and a dataframe ? 
 Likke an RDD, a DataFrame is an immutable distributed collection of data. The main difference that data frame is organized into named columns, like a table in a relational database. 
 8. How does spark achieve fault tolerance ? 
-By replicating data in different machines. If one of datanodes is faulted cluster can access replicated data in different machine.
+RDDs help to achieve fault tolerance through the lineage.RDD always has information on how to build from other datasets, if any partition of an RDD is lost due to failure, lineage helps build only that particular lost partition.
