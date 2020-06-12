@@ -1,0 +1,16 @@
+1. What are RDD Operations in Spark? 
+There are two types RDD operations in Spark: transformations and actions. Transformations are kind of operations which will transform your RDD data from one form to another. When you apply transformation on RDD you will get a get new RDD. Actions are RDD operations that give non-RDD values. The values of action are stored to drivers or to the external storage system. 
+2. What do you understand by Lazy Evaluation? 
+Lazy evaluation in Spark means that the execution will not start until an action is triggered.
+3. What is a DAG in spark ? 
+DAG in Apache Spark is a set of Vertices and Edges, where vertices represent the RDDs and the edges represent the Operation to be applied on RDD. In Spark DAG, every edge directs from earlier to later in the sequence
+4. What is the role of a spark Driver ? 
+The spark driver is the program that declares the transformations and actions on RDDs of data and submits such requests to the master. 
+5. What is Shuffling in Spark ? 
+Shuffling in Spark is the process of moving the data from partition to partition in order to aggregate, join, match up, or spread out in some other way.
+6. What are the deploy modes in Spark? 
+Deploy mode specifies where spark driver program will run. It can run on local computer - "Client Deploy Mode", and it can run on cluster- "Cluster Deploy Mode". 
+7. What is the difference between RDD and a dataframe ? 
+Likke an RDD, a DataFrame is an immutable distributed collection of data. The main difference that data frame is organized into named columns, like a table in a relational database. 
+8. How does spark achieve fault tolerance ? 
+By replicating data in different machines. If one of datanodes is faulted cluster can access replicated data in different machine.
