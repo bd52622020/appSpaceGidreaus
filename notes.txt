@@ -25,5 +25,8 @@ library mr_jobs python
 scp -P 2222 /home/giedrius/Documents/ml-100k/q1.py maria_dev@127.0.0.1:/home/maria_dev
 hdfs dfs -copyFromlocal  /home/giedrius/Documents/ml-100k  hdfs:///user/media_dev/
 
+ yarn  application -list
+ yarn  application -kill application_1592034738178_0009
+
 
 
