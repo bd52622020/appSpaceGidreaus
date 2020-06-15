@@ -1,0 +1,13 @@
+### CASSANDDRA
+cqlsh # run c
+create keyspace dev with replication = {'class':'SimpleStrategy','replication_factor':1};
+use dev;
+
+CREATE TABLE ratings (user_id int primary key, item_id int, rating int, timestamp timestamp)  ;
+COPY ratings (user_id , item_id, rating, timestamp) FROM '/home/giedrius/Documents/tasks/ml-100k/u.data' WITH DELIMITER='\t' ;
+
+CREATE TABLE user (user_id int primary key, age int, gender varchar, occupation varchar, zip_code varchar) ;
+COPY user (user_id, age, gender, occupation , zip_code ) FROM '/home/giedrius/Documents/tasks/ml-100k/u.user' WITH DELIMITER='|' ;
+
+CREATE TABLE movie4 (movie_id varchar primary key, movie_title varchar, release_date varchar, video_release_date varchar, IMDb_URL varchar, unknown int, Action int, Adventure int, Animation int, Children int, Comedy int, Crime int, Documentary int, Drama int, Fantasy int, Film_Noir int, Horror int, Musical int, Mystery int, Romance int, Sci_Fi int, Thriller int, War int, Western int) ;
+COPY movie (movie_id, movie_title, release_dat, video_release_date, IMDb_URL , unknown, Action, Adventure , Animation , Children , Comedy, Crime, Documentary , Drama , Fantasy , Film_Noir, Horror, Musical, Mystery, Romance, Sci_Fi , Thriller , War, Western ) FROM '/home/giedrius/Documents/tasks/ml-100k/u.item2' WITH DELIMITER='|' ;
