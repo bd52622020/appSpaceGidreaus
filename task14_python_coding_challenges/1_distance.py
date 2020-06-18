@@ -1,10 +1,19 @@
+from math import sin, cos, sqrt, atan2, radians
 
 if __name__ == '__main__':
-    
-    latitude1 = int(input("Please give first point latitude :"))
-    longitude1 = int(input("Please give first point longitude :"))
-    latitude2 = int(input("Please give second point latitude :"))
-    longitude2 = int(input("Please give second point longitude :"))
-    
-    print("Latitude distance:", abs(latitude1 -latitude2) )
-    print("Longitude distance:", abs(longitude1 - longitude2) )
+    R = 6373.0
+
+    lat1 = int(input("Please give first point latitude :"))
+    lon1 = int(input("Please give first point longitude :"))
+    lat2 = int(input("Please give second point latitude :"))
+    lon2 = int(input("Please give second point longitude :"))
+	
+    dlon = latitude2 - latitude1
+    dlat = longitude2 - longitude1    
+
+    a = sin(dlat / 2)**2 + cos(lat1) * cos(lat2) * sin(dlon / 2)**2
+    c = 2 * atan2(sqrt(a), sqrt(1 - a))
+
+    distance = R * c
+    print("Distance:", distance)
+
