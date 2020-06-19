@@ -1,0 +1,10 @@
+1. What is the purpose local or local[*] in a scala code ?
+Local runs Spark locally with one worker thread, loacl[*] run Spark locally with as many worker threads as logical cores on your machine.
+2. What is the difference between map and flatMap ?
+In flatMap transformation the output data is unlisted (output “list” doesn’t contain “list”).
+3. What are two fundamental methods of creating a RDD in spark ?
+Parrallezide collection and create RDD from existing RDD.
+4. What is the difference between map and mapValues ?
+MapValues trasformation is only applicable for PairRDDs (a,b).
+5. What transformation helps us summarize data according to a key ?
+ReduceByKey 
